@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://benedicteadrian.no/sitemap.xml
