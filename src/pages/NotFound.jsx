@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import PageTransition from "../components/layout/PageTransition.jsx";
 import SEOHead from "../components/seo/SEOHead.jsx";
+import { goldInitials } from "../utils/goldInitials";
 
 export default function NotFound() {
   return (
@@ -16,7 +17,7 @@ export default function NotFound() {
           404
         </p>
         <h1 className="mt-4 font-serif text-3xl font-bold sm:text-4xl">
-          Siden finnes ikke
+          {goldInitials("Siden finnes ikke")}
         </h1>
         <p className="mt-4 max-w-md text-text-secondary">
           Beklager, vi fant ikke siden du leter etter. Den kan ha blitt flyttet

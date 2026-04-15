@@ -19,6 +19,7 @@ export default function Music() {
         subtitle="Diskografi & utgivelser"
         height="min-h-[60vh]"
         showScrollIndicator={false}
+        backgroundImage="/images/hero/mistra-konsert.jpg"
       />
 
       {/* Featured Release */}
@@ -26,15 +27,12 @@ export default function Music() {
         <div className="mx-auto max-w-7xl px-6">
           <AnimatedSection>
             <div className="overflow-hidden rounded-2xl border border-border bg-bg-card md:flex">
-              <div className="flex aspect-square items-center justify-center bg-gradient-to-br from-accent-rose-dark/20 via-bg-elevated to-accent-gold/10 md:w-1/2">
-                <div className="text-center p-8">
-                  <p className="text-8xl font-serif font-bold text-gradient-gold">
-                    M
-                  </p>
-                  <p className="mt-2 text-lg uppercase tracking-[0.4em] text-text-muted">
-                    MISTRA
-                  </p>
-                </div>
+              <div className="relative overflow-hidden md:w-1/2">
+                <img
+                  src="/images/hero/mistra-konsert.jpg"
+                  alt="MISTRA — Benedicte Adrian & Anders Odden. Foto: Arash Taheri"
+                  className="h-full w-full object-cover aspect-square"
+                />
               </div>
               <div className="flex flex-col justify-center p-8 md:w-1/2 md:p-14">
                 <span className="mb-4 inline-block w-fit rounded-full bg-accent-gold/10 px-3 py-1 text-xs font-semibold uppercase tracking-wide text-accent-gold">

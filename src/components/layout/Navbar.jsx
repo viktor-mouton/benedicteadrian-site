@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import { NavLink, Link } from "react-router-dom";
 import { motion, AnimatePresence } from "framer-motion";
 import { navigationItems } from "../../data/navigation.js";
+import { goldInitials } from "../../utils/goldInitials";
 
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
@@ -36,9 +37,11 @@ export default function Navbar() {
   return (
     <header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-normal ${
-        scrolled
+        scrolled && !mobileOpen
           ? "glass border-b border-border/50 py-3"
-          : "bg-transparent py-5"
+          : scrolled
+          ? "py-3"
+          : "py-5"
       }`}
     >
       <nav
@@ -49,7 +52,7 @@ export default function Navbar() {
           to="/"
           className="font-serif text-2xl font-bold tracking-wide text-text-primary transition-colors hover:text-accent-gold"
         >
-          Benedicte Adrian
+          {goldInitials("Benedicte Adrian")}
         </Link>
 
         {/* Desktop nav */}
@@ -87,7 +90,7 @@ export default function Navbar() {
           ))}
         </ul>
 
-        {/* Mobile hamburger */}
+        {/* Mobile hamburger — z-50 keeps it above the overlay (z-40) within this stacking context */}
         <button
           className="relative z-50 flex h-10 w-10 flex-col items-center justify-center gap-1.5 md:hidden"
           onClick={() => setMobileOpen(!mobileOpen)}
@@ -95,9 +98,7 @@ export default function Navbar() {
           aria-expanded={mobileOpen}
         >
           <motion.span
-            animate={
-              mobileOpen ? { rotate: 45, y: 6 } : { rotate: 0, y: 0 }
-            }
+            animate={mobileOpen ? { rotate: 45, y: 6 } : { rotate: 0, y: 0 }}
             className="block h-0.5 w-6 bg-text-primary"
             transition={{ duration: 0.3 }}
           />
@@ -107,15 +108,13 @@ export default function Navbar() {
             transition={{ duration: 0.2 }}
           />
           <motion.span
-            animate={
-              mobileOpen ? { rotate: -45, y: -6 } : { rotate: 0, y: 0 }
-            }
+            animate={mobileOpen ? { rotate: -45, y: -6 } : { rotate: 0, y: 0 }}
             className="block h-0.5 w-6 bg-text-primary"
             transition={{ duration: 0.3 }}
           />
         </button>
 
-        {/* Mobile overlay */}
+        {/* Mobile overlay — no backdrop-filter on header when open, so fixed inset-0 covers viewport correctly */}
         <AnimatePresence>
           {mobileOpen && (
             <motion.div

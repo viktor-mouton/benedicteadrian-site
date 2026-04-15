@@ -52,6 +52,8 @@ export default function About() {
         subtitle="En stemme som krysser alle grenser"
         height="min-h-[60vh]"
         showScrollIndicator={false}
+        backgroundImage="/images/gallery/benedicte-gisle-haaland-01.jpg"
+        backgroundObjectPosition="center 15%"
       />
 
       {/* Bio Introduction */}

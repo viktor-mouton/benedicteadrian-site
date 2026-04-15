@@ -72,6 +72,7 @@ export default function Lessons() {
         subtitle="Vokalundervisning & kurs"
         height="min-h-[60vh]"
         showScrollIndicator={false}
+        backgroundImage="/images/gallery/benedicte-esten-borgos-08.jpg"
       />
 
       {/* Introduction */}
@@ -92,26 +93,12 @@ export default function Lessons() {
         <div className="mx-auto max-w-7xl px-6">
           <AnimatedSection>
             <div className="overflow-hidden rounded-2xl border border-border bg-bg-card md:flex">
-              <div className="flex aspect-[3/4] items-center justify-center bg-gradient-to-br from-accent-gold/10 via-bg-elevated to-accent-rose/5 md:w-2/5">
-                <div className="p-8 text-center">
-                  <div className="mx-auto h-48 w-36 rounded-lg border border-border-light bg-bg-card shadow-xl flex items-center justify-center">
-                    <div className="text-center px-4">
-                      <p className="font-serif text-xs font-bold leading-tight text-accent-gold">
-                        Lær å synge
-                      </p>
-                      <p className="font-serif text-xs leading-tight text-accent-gold">
-                        på 21 dager
-                      </p>
-                      <div className="my-2 h-px w-8 mx-auto bg-accent-gold/30" />
-                      <p className="text-[10px] text-text-muted">
-                        Benedicte Adrian
-                      </p>
-                    </div>
-                  </div>
-                  <p className="mt-4 text-xs uppercase tracking-widest text-text-muted">
-                    Cappelen Damm
-                  </p>
-                </div>
+              <div className="relative overflow-hidden md:w-2/5">
+                <img
+                  src="/images/hero/bok-laer-a-synge.jpg"
+                  alt="Lær å synge på 21 dager — Benedicte Adrian. Foto: Mona Nordøy"
+                  className="h-full w-full object-cover"
+                />
               </div>
               <div className="flex flex-col justify-center p-8 md:w-3/5 md:p-14">
                 <span className="mb-4 inline-block w-fit rounded-full bg-accent-gold/10 px-3 py-1 text-xs font-semibold uppercase tracking-wide text-accent-gold">

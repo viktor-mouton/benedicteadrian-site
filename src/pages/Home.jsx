@@ -14,6 +14,7 @@ const featuredProjects = [
     subtitle: "Med Anders Odden",
     description:
       "En unik musikalsk duo som forener pop og metal. Benedicte Adrian og metalpioneren Anders Odden skaper noe helt nytt sammen.",
+    image: "/images/hero/mistra-konsert.jpg",
     tag: "Nytt prosjekt",
     href: "/musikk",
   },
@@ -22,6 +23,7 @@ const featuredProjects = [
     subtitle: "Soloalbum",
     description:
       "Benedictes personlige soloalbum med stemningsfulle sanger som viser hele bredden av hennes unike stemme.",
+    image: "/images/discography/album-desember.jpg",
     href: "/musikk",
   },
   {
@@ -29,6 +31,7 @@ const featuredProjects = [
     subtitle: "Bok — Cappelen Damm",
     description:
       "En populær sangbok med 30-minutters daglige øvelser. Gjør sang tilgjengelig for alle, fra nybegynnere til viderekomne.",
+    image: "/images/hero/bok-laer-a-synge.jpg",
     tag: "Bok",
     href: "/sangtimer",
   },
@@ -54,6 +57,8 @@ export default function Home() {
       <HeroSection
         title="Benedicte Adrian"
         subtitle="Sanger &bull; Artist &bull; Vokalpedagog"
+        backgroundImage="/images/gallery/benedicte-esten-borgos-01.jpg"
+        showScrollIndicator={false}
       />
 
       {/* Introduction */}

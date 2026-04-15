@@ -1,10 +1,12 @@
 import { motion, useScroll, useTransform } from "framer-motion";
 import { useRef } from "react";
+import { goldInitials } from "../../utils/goldInitials";
 
 export default function HeroSection({
   title,
   subtitle,
   backgroundImage,
+  backgroundObjectPosition = "center 25%",
   showScrollIndicator = true,
   height = "min-h-screen",
   overlay = true,
@@ -29,6 +31,7 @@ export default function HeroSection({
             src={backgroundImage}
             alt=""
             className="h-full w-full object-cover"
+            style={{ objectPosition: backgroundObjectPosition }}
           />
         ) : (
           <div className="h-full w-full bg-gradient-to-br from-bg via-bg-elevated to-surface" />
@@ -57,7 +60,7 @@ export default function HeroSection({
           transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
           className="font-serif text-5xl font-bold leading-tight tracking-wide sm:text-7xl md:text-8xl lg:text-9xl"
         >
-          {title}
+          {goldInitials(title)}
         </motion.h1>
 
         {subtitle && (
