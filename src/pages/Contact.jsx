@@ -14,7 +14,7 @@ export default function Contact() {
       <HeroSection
         title="Kontakt"
         subtitle="Booking & henvendelser"
-        height="min-h-[60vh]"
+        height="min-h-[30vh]"
         showScrollIndicator={false}
       />
 
