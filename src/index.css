@@ -71,6 +71,28 @@
   }
 }
 
+@layer components {
+  .behold-dark-theme {
+    --behold-border-radius: 12px;
+    --behold-gap: 16px;
+
+    & behold-widget,
+    & [data-behold-widget] {
+      background-color: transparent;
+      color: var(--color-text-primary);
+    }
+
+    & a,
+    & button {
+      color: var(--color-accent-gold);
+    }
+
+    & a:hover {
+      color: var(--color-accent-gold-light);
+    }
+  }
+}
+
 @layer utilities {
   .text-gradient-gold {
     background: linear-gradient(135deg, var(--color-accent-gold-light), var(--color-accent-gold), var(--color-accent-gold-dark));

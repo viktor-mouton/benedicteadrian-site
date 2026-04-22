@@ -1,6 +1,18 @@
 import { motion, useScroll, useTransform } from "framer-motion";
-import { useRef } from "react";
+import { useRef, useState, useEffect } from "react";
 import { goldInitials } from "../../utils/goldInitials";
+
+function useIsMobile(breakpoint = 768) {
+  const [isMobile, setIsMobile] = useState(false);
+  useEffect(() => {
+    const mql = window.matchMedia(`(max-width: ${breakpoint - 1}px)`);
+    setIsMobile(mql.matches);
+    const handler = (e) => setIsMobile(e.matches);
+    mql.addEventListener("change", handler);
+    return () => mql.removeEventListener("change", handler);
+  }, [breakpoint]);
+  return isMobile;
+}
 
 export default function HeroSection({
   title,
@@ -12,6 +24,7 @@ export default function HeroSection({
   overlay = true,
 }) {
   const ref = useRef(null);
+  const isMobile = useIsMobile();
   const { scrollYProgress } = useScroll({
     target: ref,
     offset: ["start start", "end start"],
@@ -21,10 +34,10 @@ export default function HeroSection({
 
   return (
     <section ref={ref} className={`relative ${height} overflow-hidden`}>
-      {/* Background with parallax */}
+      {/* Background — parallax on desktop only, static on mobile to avoid jank */}
       <motion.div
-        className="absolute inset-0"
-        style={{ y: bgY }}
+        className="absolute inset-0 will-change-transform"
+        style={isMobile ? undefined : { y: bgY }}
       >
         {backgroundImage ? (
           <img

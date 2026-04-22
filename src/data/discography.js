@@ -169,32 +169,11 @@ export const discography = [
 
 export const timelineEvents = [
   {
-    year: "1984",
-    title: "Dollie de Luxe & MGP-seier",
+    year: "2024",
+    title: "TV2 «Boksen» & nye prosjekter",
     description:
-      "Vant Melodi Grand Prix med Dollie de Luxe og representerte Norge i Eurovision Song Contest. En legendarisk duo som satte varige spor i norsk musikkhistorie.",
-    image: "/images/discography/album-dollie-notabene-1984.jpg",
-  },
-  {
-    year: "1990-tallet",
-    title: "Den Norske Opera",
-    description:
-      "Utvidet sin musikalske horisont med operaforestillinger ved Den Norske Opera, og viste sin ekstraordinære stemmebredde.",
-    image: "/images/gallery/benedicte-gisle-haaland-01.jpg",
-  },
-  {
-    year: "2000-tallet",
-    title: "Solokarriere & «Desember»",
-    description:
-      "Ga ut soloalbumet «Desember» og etablerte seg som en allsidig soloartist med en unik stemme som krysser sjangre.",
-    image: "/images/discography/album-desember.jpg",
-  },
-  {
-    year: "2020",
-    title: "«Lær å synge på 21 dager»",
-    description:
-      "Utgitt av Cappelen Damm. En populær sangbok med daglige øvelser som gjør sang tilgjengelig for alle, basert på Benedictes mange års erfaring som vokalpedagog.",
-    image: "/images/hero/bok-laer-a-synge.jpg",
+      "Deltakelse i TV2-programmet «Boksen» sesong 2, nye konserter med MISTRA og fortsatt aktiv som artist og vokalpedagog.",
+    image: "/images/gallery/benedicte-esten-borgos-02.jpg",
   },
   {
     year: "2023",
@@ -204,10 +183,31 @@ export const timelineEvents = [
     image: "/images/hero/mistra-konsert.jpg",
   },
   {
-    year: "2024",
-    title: "TV2 «Boksen» & nye prosjekter",
+    year: "2020",
+    title: "«Lær å synge på 21 dager»",
     description:
-      "Deltakelse i TV2-programmet «Boksen» sesong 2, nye konserter med MISTRA og fortsatt aktiv som artist og vokalpedagog.",
-    image: "/images/gallery/benedicte-esten-borgos-02.jpg",
+      "Utgitt av Cappelen Damm. En populær sangbok med daglige øvelser som gjør sang tilgjengelig for alle, basert på Benedictes mange års erfaring som vokalpedagog.",
+    image: "/images/hero/bok-laer-a-synge.jpg",
+  },
+  {
+    year: "2000-tallet",
+    title: "Solokarriere & «Desember»",
+    description:
+      "Ga ut soloalbumet «Desember» og etablerte seg som en allsidig soloartist med en unik stemme som krysser sjangre.",
+    image: "/images/discography/album-desember.jpg",
+  },
+  {
+    year: "1990-tallet",
+    title: "Den Norske Opera",
+    description:
+      "Utvidet sin musikalske horisont med operaforestillinger ved Den Norske Opera, og viste sin ekstraordinære stemmebredde.",
+    image: "/images/gallery/benedicte-gisle-haaland-01.jpg",
+  },
+  {
+    year: "1984",
+    title: "Dollie de Luxe & MGP-seier",
+    description:
+      "Vant Melodi Grand Prix med Dollie de Luxe og representerte Norge i Eurovision Song Contest. En legendarisk duo som satte varige spor i norsk musikkhistorie.",
+    image: "/images/discography/album-dollie-notabene-1984.jpg",
   },
 ];
