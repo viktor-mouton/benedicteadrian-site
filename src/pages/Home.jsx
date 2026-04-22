@@ -6,6 +6,7 @@ import SectionHeading from "../components/ui/SectionHeading.jsx";
 import Card from "../components/ui/Card.jsx";
 import AnimatedSection from "../components/ui/AnimatedSection.jsx";
 import SEOHead from "../components/seo/SEOHead.jsx";
+import InstagramFeed from "../components/ui/InstagramFeed.jsx";
 import { seoData } from "../data/seo.js";
 
 const featuredProjects = [
@@ -17,6 +18,7 @@ const featuredProjects = [
     image: "/images/hero/mistra-konsert.jpg",
     tag: "Nytt prosjekt",
     href: "/musikk",
+    mobileOrder: "order-2 md:order-1",
   },
   {
     title: "Desember",
@@ -25,6 +27,7 @@ const featuredProjects = [
       "Benedictes personlige soloalbum med stemningsfulle sanger som viser hele bredden av hennes unike stemme.",
     image: "/images/discography/album-desember.jpg",
     href: "/musikk",
+    mobileOrder: "order-3 md:order-2",
   },
   {
     title: "Lær å synge på 21 dager",
@@ -33,7 +36,19 @@ const featuredProjects = [
       "En populær sangbok med 30-minutters daglige øvelser. Gjør sang tilgjengelig for alle, fra nybegynnere til viderekomne.",
     image: "/images/hero/bok-laer-a-synge.jpg",
     tag: "Bok",
-    href: "/sangtimer",
+    actions: [
+      {
+        label: "Kjøp boken",
+        href: "https://www.ark.no/produkt/boker/dokumentar-og-faktaboker/laer-a-synge-pa-21-dager-9788202823856",
+        primary: true,
+        external: true,
+      },
+      {
+        label: "Les mer",
+        href: "/sangtimer",
+      },
+    ],
+    mobileOrder: "order-1 md:order-3",
   },
 ];
 
@@ -85,9 +100,44 @@ export default function Home() {
           />
           <div className="grid gap-8 md:grid-cols-3">
             {featuredProjects.map((project, i) => (
-              <Card key={project.title} {...project} delay={i * 0.15} />
+              <div key={project.title} className={project.mobileOrder}>
+                <Card {...project} delay={i * 0.15} />
+              </div>
             ))}
           </div>
+        </div>
+      </section>
+
+      {/* Instagram / Siste nytt */}
+      <section className="bg-bg-elevated py-24 md:py-32">
+        <div className="mx-auto max-w-7xl px-6">
+          <SectionHeading
+            title="Siste nytt"
+            subtitle="Følg Benedicte på Instagram"
+          />
+          <InstagramFeed feedId="cJk1jyPvLSgO7UHepF6O" />
+          <AnimatedSection delay={0.3}>
+            <div className="mt-10 flex justify-center">
+              <a
+                href="https://www.instagram.com/benedicteadrian"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 text-sm font-semibold uppercase tracking-wider text-accent-gold transition-colors hover:text-accent-gold-light"
+              >
+                Følg på Instagram
+                <motion.span
+                  animate={{ x: [0, 4, 0] }}
+                  transition={{
+                    repeat: Infinity,
+                    duration: 1.5,
+                    ease: "easeInOut",
+                  }}
+                >
+                  &rarr;
+                </motion.span>
+              </a>
+            </div>
+          </AnimatedSection>
         </div>
       </section>
 

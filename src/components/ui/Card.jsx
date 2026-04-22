@@ -9,16 +9,19 @@ export default function Card({
   description,
   href,
   tag,
+  actions,
   delay = 0,
 }) {
-  const Wrapper = href ? "a" : "div";
-  const wrapperProps = href
-    ? {
-        href,
-        target: href.startsWith("http") ? "_blank" : undefined,
-        rel: href.startsWith("http") ? "noopener noreferrer" : undefined,
-      }
-    : {};
+  const hasActions = actions && actions.length > 0;
+  const Wrapper = href && !hasActions ? "a" : "div";
+  const wrapperProps =
+    href && !hasActions
+      ? {
+          href,
+          target: href.startsWith("http") ? "_blank" : undefined,
+          rel: href.startsWith("http") ? "noopener noreferrer" : undefined,
+        }
+      : {};
 
   return (
     <AnimatedSection delay={delay}>
@@ -60,6 +63,33 @@ export default function Card({
               <p className="mt-3 text-sm leading-relaxed text-text-secondary">
                 {description}
               </p>
+            )}
+            {hasActions && (
+              <div className="mt-5 flex flex-wrap items-center gap-3">
+                {actions.map((action) =>
+                  action.primary ? (
+                    <a
+                      key={action.label}
+                      href={action.href}
+                      target={action.external ? "_blank" : undefined}
+                      rel={action.external ? "noopener noreferrer" : undefined}
+                      className="inline-block rounded-lg bg-gradient-to-r from-accent-gold-dark via-accent-gold to-accent-gold-light px-5 py-2.5 text-xs font-semibold uppercase tracking-wider text-bg transition-all duration-normal hover:shadow-lg hover:shadow-accent-gold/20"
+                    >
+                      {action.label}
+                    </a>
+                  ) : (
+                    <a
+                      key={action.label}
+                      href={action.href}
+                      target={action.external ? "_blank" : undefined}
+                      rel={action.external ? "noopener noreferrer" : undefined}
+                      className="text-xs font-semibold uppercase tracking-wider text-accent-gold transition-colors hover:text-accent-gold-light"
+                    >
+                      {action.label}
+                    </a>
+                  ),
+                )}
+              </div>
             )}
           </div>
         </Wrapper>

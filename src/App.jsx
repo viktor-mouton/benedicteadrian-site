@@ -12,6 +12,7 @@ import Music from "./pages/Music.jsx";
 import Lessons from "./pages/Lessons.jsx";
 import GalleryPage from "./pages/Gallery.jsx";
 import Contact from "./pages/Contact.jsx";
+import TV from "./pages/TV.jsx";
 import NotFound from "./pages/NotFound.jsx";
 
 export default function App() {
@@ -36,6 +37,7 @@ export default function App() {
               <Route path="/sangtimer" element={<Lessons />} />
               <Route path="/galleri" element={<GalleryPage />} />
               <Route path="/kontakt" element={<Contact />} />
+              <Route path="/tv" element={<TV />} />
               <Route path="*" element={<NotFound />} />
             </Routes>
           </AnimatePresence>

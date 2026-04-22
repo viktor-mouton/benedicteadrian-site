@@ -132,6 +132,16 @@ export default function Lessons() {
                     </li>
                   ))}
                 </ul>
+                <div className="mt-8">
+                  <a
+                    href="https://www.ark.no/produkt/boker/dokumentar-og-faktaboker/laer-a-synge-pa-21-dager-9788202823856"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-block rounded-lg bg-gradient-to-r from-accent-gold-dark via-accent-gold to-accent-gold-light px-8 py-3 text-sm font-semibold uppercase tracking-wider text-bg transition-all duration-normal hover:shadow-lg hover:shadow-accent-gold/20"
+                  >
+                    Kjøp boken
+                  </a>
+                </div>
               </div>
             </div>
           </AnimatedSection>

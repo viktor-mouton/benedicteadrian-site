@@ -58,6 +58,12 @@ export const seoData = {
       "Bilder fra konserter, forestillinger og prosjekter med Benedicte Adrian. Pressebilder og portretter.",
     canonical: `${BASE_URL}/galleri`,
   },
+  tv: {
+    title: "TV & Media | Benedicte Adrian",
+    description:
+      "Benedicte Adrians TV-opptredener. Fra Boksen på TV2 til Kokkeskolen og 24 stjerners julekalender. Bilder og oversikt.",
+    canonical: `${BASE_URL}/tv`,
+  },
   contact: {
     title: "Kontakt & Booking | Benedicte Adrian",
     description:
