@@ -143,7 +143,7 @@ export default function Home() {
       {/* Highlights strip */}
       <section className="border-y border-border bg-bg-elevated py-16">
         <div className="mx-auto max-w-7xl px-6">
-          <div className="grid grid-cols-2 gap-8 sm:grid-cols-3 lg:grid-cols-6">
+          <div className="grid grid-cols-2 gap-8 sm:grid-cols-3 lg:grid-cols-5">
             {highlights.map((item, i) => (
               <AnimatedSection key={item.label} delay={i * 0.08}>
                 <div className="text-center">
