@@ -43,15 +43,9 @@ export default function Footer() {
           {/* Contact & Social */}
           <div>
             <h3 className="mb-4 text-sm font-semibold uppercase tracking-widest text-text-muted">
-              Kontakt
+              Følg Benedicte
             </h3>
-            <a
-              href="mailto:post@benedicteadrian.no"
-              className="text-sm text-text-secondary transition-colors hover:text-accent-gold"
-            >
-              post@benedicteadrian.no
-            </a>
-            <div className="mt-6">
+            <div className="mt-0">
               <SocialIcons />
             </div>
           </div>

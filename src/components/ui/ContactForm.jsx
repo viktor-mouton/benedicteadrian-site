@@ -1,10 +1,10 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
+import { useForm, ValidationError } from "@formspree/react";
 import { motion, AnimatePresence } from "framer-motion";
 
-const FORMSPREE_ENDPOINT = "https://formspree.io/f/YOUR_FORM_ID";
-
 export default function ContactForm() {
-  const [status, setStatus] = useState("idle");
+  const [state, handleSubmit] = useForm("mqewwlyp");
+  const [showSuccess, setShowSuccess] = useState(false);
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -13,36 +13,15 @@ export default function ContactForm() {
     message: "",
   });
 
+  useEffect(() => {
+    if (state.succeeded) {
+      setShowSuccess(true);
+      setFormData({ name: "", email: "", phone: "", subject: "Booking", message: "" });
+    }
+  }, [state.succeeded]);
+
   const handleChange = (e) => {
     setFormData((prev) => ({ ...prev, [e.target.name]: e.target.value }));
-  };
-
-  const handleSubmit = async (e) => {
-    e.preventDefault();
-    setStatus("submitting");
-
-    try {
-      const res = await fetch(FORMSPREE_ENDPOINT, {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(formData),
-      });
-
-      if (res.ok) {
-        setStatus("success");
-        setFormData({
-          name: "",
-          email: "",
-          phone: "",
-          subject: "Booking",
-          message: "",
-        });
-      } else {
-        setStatus("error");
-      }
-    } catch {
-      setStatus("error");
-    }
   };
 
   const inputClasses =
@@ -51,7 +30,7 @@ export default function ContactForm() {
   return (
     <div>
       <AnimatePresence mode="wait">
-        {status === "success" ? (
+        {showSuccess ? (
           <motion.div
             key="success"
             initial={{ opacity: 0, y: 10 }}
@@ -78,7 +57,7 @@ export default function ContactForm() {
               Vi tar kontakt med deg så snart som mulig.
             </p>
             <button
-              onClick={() => setStatus("idle")}
+              onClick={() => setShowSuccess(false)}
               className="mt-6 text-sm text-accent-gold underline underline-offset-4 transition-colors hover:text-accent-gold-light"
             >
               Send en ny melding
@@ -127,6 +106,11 @@ export default function ContactForm() {
                   onChange={handleChange}
                   placeholder="din@epost.no"
                   className={inputClasses}
+                />
+                <ValidationError
+                  field="email"
+                  errors={state.errors}
+                  className="mt-1 text-sm text-accent-rose-light"
                 />
               </div>
             </div>
@@ -189,21 +173,24 @@ export default function ContactForm() {
                 placeholder="Skriv din melding her..."
                 className={`${inputClasses} resize-none`}
               />
+              <ValidationError
+                field="message"
+                errors={state.errors}
+                className="mt-1 text-sm text-accent-rose-light"
+              />
             </div>
 
-            {status === "error" && (
-              <p className="text-sm text-accent-rose-light">
-                Noe gikk galt. Vennligst pr&oslash;v igjen eller send e-post
-                direkte.
-              </p>
-            )}
+            <ValidationError
+              errors={state.errors}
+              className="text-sm text-accent-rose-light"
+            />
 
             <button
               type="submit"
-              disabled={status === "submitting"}
+              disabled={state.submitting}
               className="w-full rounded-lg bg-gradient-to-r from-accent-gold-dark via-accent-gold to-accent-gold-light px-8 py-3.5 text-sm font-semibold uppercase tracking-wider text-bg transition-all duration-normal hover:shadow-lg hover:shadow-accent-gold/20 disabled:opacity-50"
             >
-              {status === "submitting" ? "Sender..." : "Send melding"}
+              {state.submitting ? "Sender..." : "Send melding"}
             </button>
           </motion.form>
         )}
