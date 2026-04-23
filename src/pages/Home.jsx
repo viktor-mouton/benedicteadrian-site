@@ -54,7 +54,6 @@ const featuredProjects = [
 
 const highlights = [
   { label: "Dollie de Luxe", detail: "MGP-vinner 1984" },
-  { label: "Den Norske Opera", detail: "Operasolist" },
   { label: "MISTRA", detail: "Pop møter metal" },
   { label: "Vokalpedagog", detail: "Sangtimer & kurs" },
   { label: "Forfatter", detail: "Cappelen Damm" },

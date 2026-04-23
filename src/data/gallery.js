@@ -15,6 +15,13 @@ export const galleryImages = [
     caption: "MISTRA releasekonsert. Foto: Arash Taheri",
   },
   {
+    id: "mistra-mgp24",
+    src: "/images/gallery/mistra_mgp24_0223-2.jpeg",
+    alt: "MISTRA — MGP 2024",
+    category: "MISTRA",
+    caption: "MISTRA — MGP 2024",
+  },
+  {
     id: "borgos-01",
     src: "/images/gallery/benedicte-esten-borgos-01.jpg",
     alt: "Portrett av Benedicte Adrian",

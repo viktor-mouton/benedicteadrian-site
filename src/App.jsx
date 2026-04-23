@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Routes, Route, useLocation } from "react-router-dom";
 import { AnimatePresence } from "framer-motion";
+import { Analytics } from "@vercel/analytics/react";
 import Navbar from "./components/layout/Navbar.jsx";
 import Footer from "./components/layout/Footer.jsx";
 import CursorGlow from "./components/ui/CursorGlow.jsx";
@@ -25,6 +26,7 @@ export default function App() {
       <AnimatePresence>
         {loading && <LoadingScreen onComplete={() => setLoading(false)} />}
       </AnimatePresence>
+      <Analytics />
       <CursorGlow />
       <div className="flex min-h-screen flex-col">
         <Navbar />
