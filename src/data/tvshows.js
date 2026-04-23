@@ -1,3 +1,23 @@
+export const radioShows = [
+  {
+    id: "ompalsine",
+    title: "Ompalsine",
+    network: "NRK Radio",
+    year: "2010",
+    description:
+      "Barneradioprogram hvor Benedicte Adrian forteller om sin usynlige venn Ompalsine – en fantastisk skapning som alltid får skylden når noe går galt. En varm og morsom serie for barn i fem episoder.",
+    image: "/images/tv/ompalsine.jpg",
+    href: "https://radio.nrk.no/serie/ompalsine",
+    episodes: [
+      "Ompalsine blir født",
+      "Ompalsine og Frankenstein",
+      "Ompalsine er sulten",
+      "Ompalsine er reiseklar",
+      "Ompalsine besøker mormor og morfar",
+    ],
+  },
+];
+
 export const tvShows = [
   {
     id: "boksen",
