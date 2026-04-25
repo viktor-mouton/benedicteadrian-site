@@ -3,7 +3,7 @@ import { useForm, ValidationError } from "@formspree/react";
 import { motion, AnimatePresence } from "framer-motion";
 
 function Form({ onReset }) {
-  const [state, handleSubmit] = useForm("mmwvazpok");
+  const [state, handleSubmit] = useForm("mwvazpok");
   const [formData, setFormData] = useState({
     name: "",
     email: "",
