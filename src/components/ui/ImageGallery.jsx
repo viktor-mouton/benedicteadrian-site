@@ -25,6 +25,7 @@ export default function ImageGallery({ images }) {
                     alt={img.alt}
                     className="w-full transition-transform duration-slow group-hover:scale-105"
                     loading="lazy"
+                    decoding="async"
                   />
                 ) : (
                   <div className="aspect-[3/4]">

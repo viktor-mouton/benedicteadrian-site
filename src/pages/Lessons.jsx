@@ -95,7 +95,7 @@ export default function Lessons() {
             <div className="overflow-hidden rounded-2xl border border-border bg-bg-card md:flex">
               <div className="relative overflow-hidden md:w-2/5">
                 <img
-                  src="/images/hero/bok-laer-a-synge.jpg"
+                  src="/images/hero/bok-laer-a-synge.webp"
                   alt="Lær å synge på 21 dager — Benedicte Adrian. Foto: Mona Nordøy"
                   className="h-full w-full object-cover"
                 />

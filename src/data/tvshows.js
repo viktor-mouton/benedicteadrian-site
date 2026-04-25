@@ -6,7 +6,7 @@ export const radioShows = [
     year: "2010",
     description:
       "Barneradioprogram hvor Benedicte Adrian forteller om sin usynlige venn Ompalsine – en fantastisk skapning som alltid får skylden når noe går galt. En varm og morsom serie for barn i fem episoder.",
-    image: "/images/tv/ompalsine.jpg",
+    image: "/images/tv/ompalsine.webp",
     href: "https://radio.nrk.no/serie/ompalsine",
   },
 ];
@@ -19,7 +19,7 @@ export const tvShows = [
     year: "2026",
     description:
       "Deltaker i TV2s populære underholdningsprogram Boksen, sesong 2.",
-    image: "/images/tv/boksen-benedicte-keyart-45.png",
+    image: "/images/tv/boksen-benedicte-keyart-45.webp",
   },
   {
     id: "24-stjerner",
@@ -28,7 +28,7 @@ export const tvShows = [
     year: "2024",
     description:
       "Benedicte deltok i NRKs festlige julekalender-konsept med kjente norske artister.",
-    image: "/images/tv/24-stjerners-julekalender/18.-Benedicte-Adrian.jpg",
+    image: "/images/tv/24-stjerners-julekalender/18.-Benedicte-Adrian.webp",
   },
   {
     id: "kokkeskolen",
@@ -37,7 +37,7 @@ export const tvShows = [
     year: "2025",
     description:
       "Benedicte var med i det populære matlagingsprogrammet Kokkeskolen på TV2.",
-    image: "/images/tv/kokkeskolen/Bilder-4x5-med-logo-07.jpg",
+    image: "/images/tv/kokkeskolen/Bilder-4x5-med-logo-07.webp",
     imagePosition: "center 25%",
   },
 ];

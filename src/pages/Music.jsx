@@ -19,7 +19,7 @@ export default function Music() {
         subtitle="Diskografi & utgivelser"
         height="min-h-[60vh]"
         showScrollIndicator={false}
-        backgroundImage="/images/hero/mistra-konsert.jpg"
+        backgroundImage="/images/hero/mistra-konsert.webp"
       />
 
       {/* Featured Release */}
@@ -29,7 +29,7 @@ export default function Music() {
             <div className="overflow-hidden rounded-2xl border border-border bg-bg-card md:flex">
               <div className="relative overflow-hidden md:w-1/2">
                 <img
-                  src="/images/hero/mistra-konsert.jpg"
+                  src="/images/hero/mistra-konsert.webp"
                   alt="MISTRA — Benedicte Adrian & Anders Odden. Foto: Arash Taheri"
                   className="h-full w-full object-cover aspect-square"
                 />
