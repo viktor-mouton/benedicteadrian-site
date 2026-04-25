@@ -61,13 +61,13 @@ export default function HeroSection({
 
       {/* Decorative elements */}
       <div className="absolute inset-0 overflow-hidden">
-        <div className="absolute -top-1/4 -right-1/4 h-[600px] w-[600px] rounded-full bg-accent-gold/[0.03] blur-3xl" />
-        <div className="absolute -bottom-1/4 -left-1/4 h-[500px] w-[500px] rounded-full bg-accent-rose/[0.03] blur-3xl" />
+        <div className="hidden md:block absolute -top-1/4 -right-1/4 h-[600px] w-[600px] rounded-full bg-accent-gold/[0.03] blur-3xl" />
+        <div className="hidden md:block absolute -bottom-1/4 -left-1/4 h-[500px] w-[500px] rounded-full bg-accent-rose/[0.03] blur-3xl" />
       </div>
 
       {/* Content */}
       <motion.div
-        style={{ opacity }}
+        style={isMobile ? undefined : { opacity }}
         className="relative mt-20 z-10 flex h-full flex-col items-center justify-center px-6 text-center"
       >
         <motion.h1

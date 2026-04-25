@@ -3,6 +3,7 @@ import puppeteer from 'puppeteer-core';
 import { createServer } from 'node:http';
 import { writeFileSync, mkdirSync } from 'node:fs';
 import { join } from 'node:path';
+import { platform } from 'node:process';
 import handler from 'serve-handler';
 
 const ROUTES = ['/', '/om', '/musikk', '/sangtimer', '/galleri', '/tv', '/kontakt'];
@@ -15,10 +16,15 @@ const server = createServer((req, res) =>
 
 await new Promise((resolve) => server.listen(PORT, resolve));
 
+const isMac = platform === 'darwin';
+const executablePath = isMac
+  ? '/Applications/Google Chrome.app/Contents/MacOS/Google Chrome'
+  : await chromium.executablePath();
+
 const browser = await puppeteer.launch({
-  args: chromium.args,
-  executablePath: await chromium.executablePath(),
-  headless: chromium.headless,
+  args: isMac ? [] : chromium.args,
+  executablePath,
+  headless: true,
 });
 
 for (const route of ROUTES) {

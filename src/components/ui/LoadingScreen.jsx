@@ -19,9 +19,10 @@ export default function LoadingScreen({ onComplete }) {
           BA
         </p>
         <motion.div
-          initial={{ width: 0 }}
-          animate={{ width: "100%" }}
+          initial={{ scaleX: 0 }}
+          animate={{ scaleX: 1 }}
           transition={{ delay: 0.4, duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
+          style={{ transformOrigin: "left" }}
           className="mx-auto mt-4 h-px bg-accent-gold/50"
         />
       </motion.div>

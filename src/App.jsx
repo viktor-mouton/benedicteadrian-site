@@ -1,4 +1,4 @@
-import { useState, lazy, Suspense } from "react";
+import { useState, lazy, Suspense, useEffect } from "react";
 import { Routes, Route, useLocation } from "react-router-dom";
 import { AnimatePresence } from "framer-motion";
 import { Analytics } from "@vercel/analytics/react";
@@ -21,6 +21,21 @@ export default function App() {
   const location = useLocation();
   const [loading, setLoading] = useState(true);
   useScrollToTop();
+
+  useEffect(() => {
+    if (!loading) {
+      const timer = setTimeout(() => {
+        import("./pages/About.jsx");
+        import("./pages/Music.jsx");
+        import("./pages/Lessons.jsx");
+        import("./pages/Gallery.jsx");
+        import("./pages/Contact.jsx");
+        import("./pages/TV.jsx");
+        import("./pages/NotFound.jsx");
+      }, 2000);
+      return () => clearTimeout(timer);
+    }
+  }, [loading]);
 
   return (
     <>

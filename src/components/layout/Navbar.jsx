@@ -4,6 +4,16 @@ import { motion, AnimatePresence } from "framer-motion";
 import { navigationItems } from "../../data/navigation.js";
 import { goldInitials } from "../../utils/goldInitials";
 
+const routePrefetchMap = {
+  "/": () => import("../../pages/Home.jsx"),
+  "/om": () => import("../../pages/About.jsx"),
+  "/musikk": () => import("../../pages/Music.jsx"),
+  "/sangtimer": () => import("../../pages/Lessons.jsx"),
+  "/tv": () => import("../../pages/TV.jsx"),
+  "/galleri": () => import("../../pages/Gallery.jsx"),
+  "/kontakt": () => import("../../pages/Contact.jsx"),
+};
+
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
@@ -137,6 +147,7 @@ export default function Navbar() {
                       <NavLink
                         to={item.path}
                         onClick={() => setMobileOpen(false)}
+                        onTouchStart={() => routePrefetchMap[item.path]?.()}
                         className={({ isActive }) =>
                           `font-serif text-3xl font-semibold transition-colors ${
                             isActive

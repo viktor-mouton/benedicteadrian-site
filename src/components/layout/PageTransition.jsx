@@ -17,6 +17,7 @@ const variants = {
 export default function PageTransition({ children }) {
   return (
     <motion.div
+      style={{ willChange: "transform, opacity" }}
       variants={variants}
       initial="initial"
       animate="animate"
