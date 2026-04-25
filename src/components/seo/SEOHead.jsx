@@ -4,7 +4,7 @@ export default function SEOHead({
   title,
   description,
   canonical,
-  ogImage = "https://benedicteadrian.no/og-image.jpg",
+  ogImage = "https://benedicteadrian.no/images/hero/mistra-konsert.webp",
   structuredData,
 }) {
   return (
