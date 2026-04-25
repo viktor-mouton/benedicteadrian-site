@@ -10,10 +10,10 @@ export default defineConfig({
   build: {
     rollupOptions: {
       output: {
-        manualChunks: {
-          'vendor-react': ['react', 'react-dom'],
-          'vendor-router': ['react-router-dom'],
-          'vendor-motion': ['framer-motion'],
+        manualChunks(id) {
+          if (id.includes('node_modules/framer-motion')) return 'vendor-motion';
+          if (id.includes('node_modules/react-router-dom') || id.includes('node_modules/react-router/') || id.includes('node_modules/@remix-run')) return 'vendor-router';
+          if (id.includes('node_modules/react-dom') || id.includes('node_modules/react/')) return 'vendor-react';
         },
       },
     },
