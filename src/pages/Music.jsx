@@ -50,7 +50,7 @@ export default function Music() {
                 </p>
                 <div className="mt-8 flex flex-wrap gap-4">
                   <a
-                    href="https://open.spotify.com/artist/0XwVL3o8eZT2dNMC7iibwo"
+                    href="https://open.spotify.com/artist/3eRN1bky9c7y2WT3PShu6c"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="inline-flex items-center gap-2 rounded-lg bg-[#1DB954]/10 px-5 py-2.5 text-sm font-medium text-[#1DB954] transition-colors hover:bg-[#1DB954]/20"
@@ -163,7 +163,7 @@ export default function Music() {
           <AnimatedSection>
             <div className="overflow-hidden rounded-xl border border-border">
               <iframe
-                src="https://open.spotify.com/embed/artist/0XwVL3o8eZT2dNMC7iibwo"
+                src="https://open.spotify.com/embed/artist/3eRN1bky9c7y2WT3PShu6c"
                 width="100%"
                 height="352"
                 allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
