@@ -1,6 +1,6 @@
 import puppeteer from 'puppeteer';
 import { createServer } from 'node:http';
-import { readFileSync, writeFileSync, mkdirSync } from 'node:fs';
+import { writeFileSync, mkdirSync } from 'node:fs';
 import { join } from 'node:path';
 import handler from 'serve-handler';
 
