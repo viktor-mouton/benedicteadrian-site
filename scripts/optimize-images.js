@@ -37,7 +37,7 @@ async function main() {
       await stat(outPath);
       skippedCount++;
       continue;
-    } catch {}
+    } catch { /* file doesn't exist, proceed with optimization */ }
 
     const originalSize = (await stat(filePath)).size;
     try {
