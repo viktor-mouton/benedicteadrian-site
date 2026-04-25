@@ -32,7 +32,7 @@ export default function App() {
       <div className="flex min-h-screen flex-col">
         <Navbar />
         <main className="flex-1">
-          <AnimatePresence>
+          <AnimatePresence mode="wait">
             <Suspense fallback={null}>
               <Routes location={location} key={location.pathname}>
                 <Route path="/" element={<Home />} />

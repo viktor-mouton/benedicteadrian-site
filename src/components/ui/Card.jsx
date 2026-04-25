@@ -39,9 +39,9 @@ export default function Card({
               <img
                 src={image}
                 alt={title}
-                className="h-full w-full object-cover transition-transform duration-slow group-hover:scale-105"
                 loading="lazy"
                 decoding="async"
+                className="h-full w-full object-cover transition-transform duration-slow group-hover:scale-105"
               />
             ) : (
               <PlaceholderImage label={title} />

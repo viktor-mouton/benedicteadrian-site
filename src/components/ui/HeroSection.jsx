@@ -46,8 +46,6 @@ export default function HeroSection({
             alt=""
             className="h-full w-full object-cover"
             style={{ objectPosition: backgroundObjectPosition }}
-            fetchPriority="high"
-            decoding="async"
           />
         ) : (
           <div className="h-full w-full bg-gradient-to-br from-bg via-bg-elevated to-surface" />
