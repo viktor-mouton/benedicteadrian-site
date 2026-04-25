@@ -169,45 +169,73 @@ export const discography = [
 
 export const timelineEvents = [
   {
-    year: "2024",
-    title: "TV2 «Boksen» & nye prosjekter",
+    year: "2026",
+    title: "TV2 «Boksen»",
     description:
-      "Deltakelse i TV2-programmet «Boksen» sesong 2, nye konserter med MISTRA og fortsatt aktiv som artist og vokalpedagog.",
-    image: "/images/gallery/benedicte-esten-borgos-02.jpg",
+      "Deltakelse i TV2-programmet «Boksen» sesong 2, der tretten kjendiser konkurrerer i individuelle bokser.",
+    image: "/images/tv/deltager-bilde-boksen.avif",
+  },
+  {
+    year: "2024",
+    title: "MISTRA i Melodi Grand Prix",
+    description:
+      "MISTRA konkurrerte i Melodi Grand Prix 2024 med «Waltz of Death».",
+    image: "/images/gallery/mistra_mgp24_0223-2.jpeg",
   },
   {
     year: "2023",
     title: "MISTRA — samarbeid med Anders Odden",
     description:
-      "Startet den uventede og kritikerroste duoen MISTRA sammen med metalpioneren Anders Odden. En fusjon av pop og metal.",
-    image: "/images/hero/mistra-konsert.jpg",
+      "Startet den uventede og kritikerroste duoen MISTRA med metalpioneren Anders Odden (Cadaver). En dristig fusjon av pop og metal — debutalbumet «Waltz of Death» ble sluppet januar 2024.",
+    image: "/images/timeline/mistra-band-photo.jpg",
   },
   {
-    year: "2020",
+    year: "2023",
     title: "«Lær å synge på 21 dager»",
     description:
       "Utgitt av Cappelen Damm. En populær sangbok med daglige øvelser som gjør sang tilgjengelig for alle, basert på Benedictes mange års erfaring som vokalpedagog.",
     image: "/images/hero/bok-laer-a-synge.jpg",
   },
   {
-    year: "2000-tallet",
-    title: "Solokarriere & «Desember»",
+    year: "2007",
+    title: "Pop Idol-dommer",
     description:
-      "Ga ut soloalbumet «Desember» og etablerte seg som en allsidig soloartist med en unik stemme som krysser sjangre.",
-    image: "/images/discography/album-desember.jpg",
+      "Satt i juryen for sesong 5 av Idol på TV2. Sesongen ble vunnet av Glenn Lyse.",
+    image: "/images/gallery/icare-bilder-2013.jpg",
   },
   {
-    year: "1990-tallet",
-    title: "Den Norske Opera",
+    year: "2004",
+    title: "Solveig i Peer Gynt",
     description:
-      "Utvidet sin musikalske horisont med operaforestillinger ved Den Norske Opera, og viste sin ekstraordinære stemmebredde.",
+      "Spilte Solveig i Ibsen/Griegs «Peer Gynt» ved Gålåvatnet — en av Norges mest ambisiøse utendørsforestillinger.",
     image: "/images/gallery/benedicte-gisle-haaland-01.jpg",
+  },
+  {
+    year: "1988",
+    title: "Den Norske Opera — debut",
+    description:
+      "Debut som Dronningen av Natten i Mozarts «Tryllefløyten» ved Den Norske Opera — en av operaverdenes mest krevende sopranroller.",
+    image: "/images/timeline/tryllefloeyten-1988.jpg",
+  },
+  {
+    year: "1987",
+    title: "«Which Witch» — verdensurpremiere",
+    description:
+      "Co-skapte musikalen «Which Witch» med Ingrid Bjørnov. Verdensurpremiere i Grieghallen, Bergen. Musikalen ble fremført 142 ganger for ca. 276 000 tilskuere, og hadde West End-premiere på Piccadilly Theatre i London i 1992.",
+    image: "/images/discography/album-which-witch-studio-1987.jpg",
   },
   {
     year: "1984",
     title: "Dollie de Luxe & MGP-seier",
     description:
-      "Vant Melodi Grand Prix med Dollie de Luxe og representerte Norge i Eurovision Song Contest. En legendarisk duo som satte varige spor i norsk musikkhistorie.",
+      "Vant Melodi Grand Prix med «Lenge leve livet» og representerte Norge i Eurovision Song Contest i Luxembourg. En legendarisk duo som satte varige spor i norsk musikkhistorie.",
     image: "/images/discography/album-dollie-notabene-1984.jpg",
+  },
+  {
+    year: "1980",
+    title: "Dollie de Luxe: starten",
+    description:
+      "Dannet pop-duoen Dollie de Luxe med barndomsvenninnen Ingrid Bjørnov. Debutalbumet «Første akt» ble en umiddelbar suksess — og vant Spellemannsprisen.",
+    image: "/images/discography/album-dollie-forste-akt.jpg",
   },
 ];

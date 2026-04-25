@@ -17,18 +17,19 @@ export default function Timeline({ events }) {
               direction={isLeft ? "left" : "right"}
             >
               <div className="relative pl-12 md:pl-0">
-                {/* Dot on the line */}
-                <div className="absolute left-4 top-2 h-3 w-3 -translate-x-1/2 rounded-full border-2 border-accent-gold bg-bg md:left-1/2" />
+                {/* Year badge on the line */}
+                <div className="absolute left-4 top-1 -translate-x-1/2 md:left-1/2">
+                  <span className="inline-flex items-center rounded-full bg-accent-gold px-3 py-1 text-xs font-bold tracking-wide text-bg whitespace-nowrap">
+                    {event.year}
+                  </span>
+                </div>
 
                 {/* Two-column grid on desktop */}
-                <div className="md:grid md:grid-cols-2">
+                <div className="pt-1 md:grid md:grid-cols-2 md:pt-0">
                   {/* Left slot: text when isLeft, image when !isLeft */}
                   {isLeft ? (
                     <div className="md:pr-16 md:text-right">
-                      <span className="text-gradient-gold font-serif text-2xl font-bold">
-                        {event.year}
-                      </span>
-                      <h3 className="mt-1 font-serif text-xl font-semibold text-text-primary">
+                      <h3 className="font-serif text-xl font-semibold text-text-primary">
                         {event.title}
                       </h3>
                       <p className="mt-2 text-sm leading-relaxed text-text-secondary">
@@ -72,10 +73,7 @@ export default function Timeline({ events }) {
                     )
                   ) : (
                     <div className="md:pl-16">
-                      <span className="text-gradient-gold font-serif text-2xl font-bold">
-                        {event.year}
-                      </span>
-                      <h3 className="mt-1 font-serif text-xl font-semibold text-text-primary">
+                      <h3 className="font-serif text-xl font-semibold text-text-primary">
                         {event.title}
                       </h3>
                       <p className="mt-2 text-sm leading-relaxed text-text-secondary">

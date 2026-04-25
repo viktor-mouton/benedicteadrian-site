@@ -1,10 +1,7 @@
-import { useState } from "react";
-import { AnimatePresence } from "framer-motion";
 import PageTransition from "../components/layout/PageTransition.jsx";
 import HeroSection from "../components/ui/HeroSection.jsx";
 import SectionHeading from "../components/ui/SectionHeading.jsx";
 import AnimatedSection from "../components/ui/AnimatedSection.jsx";
-import Lightbox from "../components/ui/Lightbox.jsx";
 import PlaceholderImage from "../components/ui/PlaceholderImage.jsx";
 import SEOHead from "../components/seo/SEOHead.jsx";
 import { seoData } from "../data/seo.js";
@@ -12,7 +9,6 @@ import { tvShows, radioShows } from "../data/tvshows.js";
 
 export default function TV() {
   const seo = seoData.tv;
-  const [lightboxShow, setLightboxShow] = useState(null);
 
   return (
     <PageTransition>
@@ -23,7 +19,7 @@ export default function TV() {
         subtitle="Utvalgte TV-opptredener"
         height="min-h-[60vh]"
         showScrollIndicator={false}
-        backgroundImage="/images/gallery/benedicte-esten-borgos-01.jpg"
+        backgroundImage="/images/tv/deltager-bilde-boksen.avif"
       />
 
       {/* Introduction */}
@@ -49,32 +45,23 @@ export default function TV() {
           <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
             {tvShows.map((show, i) => (
               <AnimatedSection key={show.id} delay={i * 0.15}>
-                <div
-                  onClick={() =>
-                    show.images.length > 0 && setLightboxShow(show)
-                  }
-                  className={`group overflow-hidden rounded-xl border border-border bg-bg-card transition-all duration-normal hover:border-border-light hover:bg-bg-card-hover ${show.images.length > 0 ? "cursor-pointer" : ""}`}
-                >
+                <div className="group overflow-hidden rounded-xl border border-border bg-bg-card transition-all duration-normal hover:border-border-light hover:bg-bg-card-hover">
                   <div className="relative aspect-video overflow-hidden">
                     {show.image ? (
                       <img
                         src={show.image}
                         alt={show.title}
-                        className="h-full w-full object-cover transition-transform duration-slow group-hover:scale-105"
+                        className="h-full w-full object-cover object-top transition-transform duration-slow group-hover:scale-105"
+                        style={show.imagePosition ? { objectPosition: show.imagePosition } : undefined}
                       />
                     ) : (
                       <PlaceholderImage label={show.title} />
                     )}
-                    <span className="absolute top-4 left-4 rounded-full bg-accent-gold/90 px-3 py-1 text-xs font-semibold uppercase tracking-wide text-bg">
-                      {show.network || "TV"}
-                    </span>
-                    {show.images.length > 0 && (
-                      <div className="absolute inset-0 flex items-center justify-center bg-bg/0 transition-colors duration-normal group-hover:bg-bg/30">
-                        <span className="rounded-full bg-bg/70 px-4 py-2 text-xs font-semibold uppercase tracking-wider text-text-primary opacity-0 transition-opacity duration-normal group-hover:opacity-100">
-                          Se bilder
-                        </span>
-                      </div>
-                    )}
+                    {show.network === "TV2" ? (
+                      <img src="/assets/icons/tv2-icon.png" alt="TV2" className="absolute top-4 left-4 h-7 w-auto drop-shadow" />
+                    ) : show.network?.startsWith("NRK") ? (
+                      <img src="/assets/icons/nrk-icon.png" alt={show.network} className="absolute top-4 left-4 h-7 w-auto drop-shadow" />
+                    ) : null}
                   </div>
                   <div className="p-6">
                     <h3 className="font-serif text-xl font-bold transition-colors group-hover:text-accent-gold">
@@ -119,9 +106,11 @@ export default function TV() {
                     ) : (
                       <PlaceholderImage label={show.title} />
                     )}
-                    <span className="absolute top-4 left-4 rounded-full bg-accent-gold/90 px-3 py-1 text-xs font-semibold uppercase tracking-wide text-bg">
-                      {show.network}
-                    </span>
+                    {show.network === "TV2" ? (
+                      <img src="/assets/icons/tv2-icon.png" alt="TV2" className="absolute top-4 left-4 h-7 w-auto drop-shadow" />
+                    ) : show.network?.startsWith("NRK") ? (
+                      <img src="/assets/icons/nrk-icon.png" alt={show.network} className="absolute top-4 left-4 h-7 w-auto drop-shadow" />
+                    ) : null}
                     <div className="absolute inset-0 flex items-center justify-center bg-bg/0 transition-colors duration-normal group-hover:bg-bg/30">
                       <span className="rounded-full bg-bg/70 px-4 py-2 text-xs font-semibold uppercase tracking-wider text-text-primary opacity-0 transition-opacity duration-normal group-hover:opacity-100">
                         Lytt på NRK
@@ -156,16 +145,23 @@ export default function TV() {
         </div>
       </section>
 
-      {/* Lightbox for show images */}
-      <AnimatePresence>
-        {lightboxShow && (
-          <Lightbox
-            images={lightboxShow.images}
-            initialIndex={0}
-            onClose={() => setLightboxShow(null)}
-          />
-        )}
-      </AnimatePresence>
+      {/* CTA */}
+      <section className="py-24 md:py-32 border-t border-border">
+        <div className="mx-auto max-w-3xl px-6 text-center">
+          <AnimatedSection>
+            <h2 className="font-serif text-3xl font-bold sm:text-4xl">Vil du booke Benedicte Adrian?</h2>
+            <p className="mt-4 text-lg leading-relaxed text-text-secondary">
+              Ønsker du Benedicte til ditt TV-program eller show? Ta kontakt for booking og samarbeid.
+            </p>
+            <a
+              href="/kontakt"
+              className="mt-8 inline-block rounded-lg bg-gradient-to-r from-accent-gold-dark via-accent-gold to-accent-gold-light px-8 py-3 text-sm font-semibold uppercase tracking-wider text-bg transition-all duration-normal hover:shadow-lg hover:shadow-accent-gold/20"
+            >
+              Ta kontakt
+            </a>
+          </AnimatedSection>
+        </div>
+      </section>
     </PageTransition>
   );
 }

@@ -24,6 +24,7 @@ export default function GalleryPage() {
         subtitle="Bilder fra konserter, forestillinger & prosjekter"
         height="min-h-[60vh]"
         showScrollIndicator={false}
+        backgroundImage="/images/gallery/benedicte-esten-borgos-07.jpg"
       />
 
       <section className="py-24 md:py-32">

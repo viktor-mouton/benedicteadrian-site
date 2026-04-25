@@ -16,8 +16,8 @@ export default function Footer() {
               Benedicte Adrian
             </Link>
             <p className="mt-4 max-w-xs text-sm leading-relaxed text-text-secondary">
-              Sanger, artist og vokalpedagog. Kjent fra Dollie de Luxe, Den
-              Norske Opera og MISTRA.
+              Sanger, artist og vokalpedagog. Kjent fra Dollie de Luxe,
+              Which Witch og MISTRA.
             </p>
           </div>
 

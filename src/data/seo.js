@@ -7,7 +7,7 @@ const personSchema = {
   url: BASE_URL,
   jobTitle: "Sanger, Artist & Vokalpedagog",
   description:
-    "Norsk sanger og artist kjent fra Dollie de Luxe, Den Norske Opera, MISTRA og som vokalpedagog og forfatter.",
+    "Norsk sanger og artist kjent fra Dollie de Luxe, Which Witch, MISTRA og som vokalpedagog og forfatter.",
   sameAs: [
     "https://www.facebook.com/benedicteadrian",
     "https://www.instagram.com/benedicteadrian",
@@ -19,7 +19,7 @@ export const seoData = {
   home: {
     title: "Benedicte Adrian | Sanger, Artist & Vokalpedagog",
     description:
-      "Benedicte Adrian — norsk sanger og artist. Kjent fra Dollie de Luxe, Den Norske Opera, MISTRA og som vokalpedagog. Booking og sangtimer.",
+      "Benedicte Adrian — norsk sanger og artist. Kjent fra Dollie de Luxe, Which Witch, MISTRA og som vokalpedagog. Booking og sangtimer.",
     canonical: `${BASE_URL}/`,
     structuredData: personSchema,
   },

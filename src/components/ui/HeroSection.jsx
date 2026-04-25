@@ -86,7 +86,7 @@ export default function HeroSection({
               delay: 0.3,
               ease: [0.22, 1, 0.36, 1],
             }}
-            className="mt-6 max-w-2xl text-lg tracking-widest uppercase text-text-secondary sm:text-xl"
+            className="mt-6 max-w-2xl text-lg tracking-widest uppercase text-white sm:text-xl"
           >
             {subtitle}
           </motion.p>
