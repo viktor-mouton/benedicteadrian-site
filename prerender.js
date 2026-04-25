@@ -1,4 +1,5 @@
-import puppeteer from 'puppeteer';
+import chromium from '@sparticuz/chromium';
+import puppeteer from 'puppeteer-core';
 import { createServer } from 'node:http';
 import { writeFileSync, mkdirSync } from 'node:fs';
 import { join } from 'node:path';
@@ -14,7 +15,11 @@ const server = createServer((req, res) =>
 
 await new Promise((resolve) => server.listen(PORT, resolve));
 
-const browser = await puppeteer.launch({ args: ['--no-sandbox'] });
+const browser = await puppeteer.launch({
+  args: chromium.args,
+  executablePath: await chromium.executablePath(),
+  headless: chromium.headless,
+});
 
 for (const route of ROUTES) {
   const page = await browser.newPage();

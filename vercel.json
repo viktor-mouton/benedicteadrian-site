@@ -1,4 +1,3 @@
 {
-  "installCommand": "npm install && npx puppeteer browsers install chrome",
   "rewrites": [{ "source": "/(.*)", "destination": "/index.html" }]
 }
