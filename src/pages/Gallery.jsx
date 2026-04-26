@@ -3,8 +3,6 @@ import PageTransition from "../components/layout/PageTransition.jsx";
 import HeroSection from "../components/ui/HeroSection.jsx";
 import ImageGallery from "../components/ui/ImageGallery.jsx";
 import AnimatedSection from "../components/ui/AnimatedSection.jsx";
-import SEOHead from "../components/seo/SEOHead.jsx";
-import { seoData } from "../data/seo.js";
 import { galleryCategories, galleryImages } from "../data/gallery.js";
 
 export default function GalleryPage() {
@@ -17,8 +15,6 @@ export default function GalleryPage() {
 
   return (
     <PageTransition>
-      <SEOHead {...seoData.gallery} />
-
       <HeroSection
         title="Galleri"
         subtitle="Bilder fra konserter, forestillinger & prosjekter"

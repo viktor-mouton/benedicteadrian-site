@@ -3,17 +3,11 @@ import HeroSection from "../components/ui/HeroSection.jsx";
 import SectionHeading from "../components/ui/SectionHeading.jsx";
 import AnimatedSection from "../components/ui/AnimatedSection.jsx";
 import PlaceholderImage from "../components/ui/PlaceholderImage.jsx";
-import SEOHead from "../components/seo/SEOHead.jsx";
-import { seoData } from "../data/seo.js";
 import { tvShows, radioShows } from "../data/tvshows.js";
 
 export default function TV() {
-  const seo = seoData.tv;
-
   return (
     <PageTransition>
-      <SEOHead {...seo} />
-
       <HeroSection
         title="TV & Media"
         subtitle="Utvalgte TV-opptredener"

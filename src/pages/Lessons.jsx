@@ -3,8 +3,6 @@ import PageTransition from "../components/layout/PageTransition.jsx";
 import HeroSection from "../components/ui/HeroSection.jsx";
 import SectionHeading from "../components/ui/SectionHeading.jsx";
 import AnimatedSection from "../components/ui/AnimatedSection.jsx";
-import SEOHead from "../components/seo/SEOHead.jsx";
-import { seoData } from "../data/seo.js";
 
 const lessonTypes = [
   {
@@ -81,12 +79,8 @@ const testimonials = [
 ];
 
 export default function Lessons() {
-  const seo = seoData.lessons;
-
   return (
     <PageTransition>
-      <SEOHead {...seo} />
-
       <HeroSection
         title="Sangtimer"
         subtitle="Vokalundervisning & kurs"
@@ -228,6 +222,7 @@ export default function Lessons() {
             {[...testimonials, ...testimonials].map((t, i) => (
               <blockquote
                 key={i}
+                aria-hidden={i >= testimonials.length ? true : undefined}
                 className="w-80 flex-none rounded-xl border border-border bg-bg-card p-8"
               >
                 <svg

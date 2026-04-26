@@ -3,8 +3,6 @@ import HeroSection from "../components/ui/HeroSection.jsx";
 import SectionHeading from "../components/ui/SectionHeading.jsx";
 import Timeline from "../components/ui/Timeline.jsx";
 import AnimatedSection from "../components/ui/AnimatedSection.jsx";
-import SEOHead from "../components/seo/SEOHead.jsx";
-import { seoData } from "../data/seo.js";
 import { timelineEvents } from "../data/discography.js";
 
 const expertise = [
@@ -41,12 +39,8 @@ const expertise = [
 ];
 
 export default function About() {
-  const seo = seoData.about;
-
   return (
     <PageTransition>
-      <SEOHead {...seo} />
-
       <HeroSection
         title="Om Benedicte"
         subtitle="En stemme som krysser alle grenser"

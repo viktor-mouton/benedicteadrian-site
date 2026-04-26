@@ -51,6 +51,51 @@ export const seoData = {
     description:
       "Sangtimer og vokalundervisning med Benedicte Adrian. Forfatter av «Lær å synge på 21 dager». Privatundervisning, workshops og kurs.",
     canonical: `${BASE_URL}/sangtimer`,
+    structuredData: {
+      "@context": "https://schema.org",
+      "@type": "EducationalOrganization",
+      name: "Sangtimer med Benedicte Adrian",
+      url: `${BASE_URL}/sangtimer`,
+      description:
+        "Sangtimer og vokalundervisning med Benedicte Adrian. Privatundervisning, workshops og masterclass.",
+      review: [
+        {
+          "@type": "Review",
+          reviewBody:
+            "Sangtimene med Benedicte er så mye mer enn å synge — det er ren terapi. Hun har lært meg at fysisk og mentalt velvære er en forutsetning for å kunne synge.",
+          author: { "@type": "Person", name: "Runar Kvamme" },
+        },
+        {
+          "@type": "Review",
+          reviewBody:
+            "Benedicte er kunnskapsrik, trygg og legger til rette for kreativitet kombinert med gode evner til å lære bort.",
+          author: { "@type": "Person", name: "Adrian" },
+        },
+        {
+          "@type": "Review",
+          reviewBody:
+            "Undervisningen med Benedicte er så koselig at jeg glemte helt å være nervøs. Benedicte er svært dyktig og har fokus på de viktige tingene.",
+          author: { "@type": "Person", name: "Berntine" },
+        },
+        {
+          "@type": "Review",
+          reviewBody: "Inspirerende og motiverende sanglærer, anbefales!",
+          author: { "@type": "Person", name: "Mathias" },
+        },
+        {
+          "@type": "Review",
+          reviewBody:
+            "Benedicte er virkelig en god sanglærer. Hun har gjennom flere år hjulpet Lily med å utvikle sitt musikk potensiale. Det er alltid mye latter og god stemning.",
+          author: { "@type": "Person", name: "Janne" },
+        },
+        {
+          "@type": "Review",
+          reviewBody:
+            "Jeg har tatt sangtimer hos Benedicte siden 2018 og for meg var det udiskutabelt førstevalget! En av Norges vakreste stemmer!",
+          author: { "@type": "Person", name: "Terje Grødem" },
+        },
+      ],
+    },
   },
   gallery: {
     title: "Galleri | Benedicte Adrian",
@@ -69,5 +114,11 @@ export const seoData = {
     description:
       "Ta kontakt med Benedicte Adrian for booking, sangtimer eller andre henvendelser. Booking av konserter og arrangementer.",
     canonical: `${BASE_URL}/kontakt`,
+  },
+  notFound: {
+    title: "404 — Siden finnes ikke | Benedicte Adrian",
+    description: "Siden du leter etter finnes ikke.",
+    canonical: `${BASE_URL}/`,
+    noindex: true,
   },
 };

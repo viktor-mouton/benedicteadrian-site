@@ -3,14 +3,10 @@ import HeroSection from "../components/ui/HeroSection.jsx";
 import ContactForm from "../components/ui/ContactForm.jsx";
 import AnimatedSection from "../components/ui/AnimatedSection.jsx";
 import SocialIcons from "../components/ui/SocialIcons.jsx";
-import SEOHead from "../components/seo/SEOHead.jsx";
-import { seoData } from "../data/seo.js";
 
 export default function Contact() {
   return (
     <PageTransition>
-      <SEOHead {...seoData.contact} />
-
       <HeroSection
         title="Kontakt"
         subtitle="Booking & henvendelser"

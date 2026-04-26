@@ -23,7 +23,7 @@ export default function Footer() {
 
           {/* Navigation */}
           <div>
-            <h3 className="mb-4 text-sm font-semibold uppercase tracking-widest text-text-muted">
+            <h3 className="mb-4 text-sm font-semibold uppercase tracking-widest text-text-secondary">
               Sider
             </h3>
             <ul className="space-y-3">
@@ -42,7 +42,7 @@ export default function Footer() {
 
           {/* Contact & Social */}
           <div>
-            <h3 className="mb-4 text-sm font-semibold uppercase tracking-widest text-text-muted">
+            <h3 className="mb-4 text-sm font-semibold uppercase tracking-widest text-text-secondary">
               Følg Benedicte
             </h3>
             <div className="mt-0">
@@ -52,7 +52,7 @@ export default function Footer() {
         </div>
 
         <div className="mt-16 border-t border-border pt-8 text-center">
-          <p className="text-xs text-text-muted">
+          <p className="text-xs text-text-secondary">
             &copy; {new Date().getFullYear()} Benedicte Adrian. Alle rettigheter
             reservert.
           </p>

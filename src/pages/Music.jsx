@@ -3,17 +3,11 @@ import HeroSection from "../components/ui/HeroSection.jsx";
 import SectionHeading from "../components/ui/SectionHeading.jsx";
 import Card from "../components/ui/Card.jsx";
 import AnimatedSection from "../components/ui/AnimatedSection.jsx";
-import SEOHead from "../components/seo/SEOHead.jsx";
-import { seoData } from "../data/seo.js";
 import { discography } from "../data/discography.js";
 
 export default function Music() {
-  const seo = seoData.music;
-
   return (
     <PageTransition>
-      <SEOHead {...seo} />
-
       <HeroSection
         title="Musikk"
         subtitle="Diskografi & utgivelser"

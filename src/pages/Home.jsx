@@ -5,9 +5,7 @@ import HeroSection from "../components/ui/HeroSection.jsx";
 import SectionHeading from "../components/ui/SectionHeading.jsx";
 import Card from "../components/ui/Card.jsx";
 import AnimatedSection from "../components/ui/AnimatedSection.jsx";
-import SEOHead from "../components/seo/SEOHead.jsx";
 import InstagramFeed from "../components/ui/InstagramFeed.jsx";
-import { seoData } from "../data/seo.js";
 
 const featuredProjects = [
   {
@@ -61,12 +59,8 @@ const highlights = [
 ];
 
 export default function Home() {
-  const seo = seoData.home;
-
   return (
     <PageTransition>
-      <SEOHead {...seo} />
-
       {/* Hero */}
       <HeroSection
         title="Benedicte Adrian"
