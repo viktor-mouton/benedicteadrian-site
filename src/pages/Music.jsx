@@ -14,6 +14,7 @@ export default function Music() {
         height="min-h-[60vh]"
         showScrollIndicator={false}
         backgroundImage="/images/hero/mistra-konsert.webp"
+        imageAlt="MISTRA konsert — Benedicte Adrian og Anders Odden"
       />
 
       {/* Featured Release */}

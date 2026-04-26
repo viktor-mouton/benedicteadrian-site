@@ -86,7 +86,8 @@ export default function Lessons() {
         subtitle="Vokalundervisning & kurs"
         height="min-h-[60vh]"
         showScrollIndicator={false}
-        backgroundImage="/images/gallery/benedicte-esten-borgos-08.jpg"
+        backgroundImage="/images/gallery/benedicte-esten-borgos-08.webp"
+        imageAlt="Benedicte Adrian"
       />
 
       {/* Introduction */}

@@ -20,7 +20,8 @@ export default function GalleryPage() {
         subtitle="Bilder fra konserter, forestillinger & prosjekter"
         height="min-h-[60vh]"
         showScrollIndicator={false}
-        backgroundImage="/images/gallery/benedicte-esten-borgos-07.jpg"
+        backgroundImage="/images/gallery/benedicte-esten-borgos-07.webp"
+        imageAlt="Benedicte Adrian"
       />
 
       <section className="py-24 md:py-32">

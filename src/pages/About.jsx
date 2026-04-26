@@ -46,7 +46,8 @@ export default function About() {
         subtitle="En stemme som krysser alle grenser"
         height="min-h-[60vh]"
         showScrollIndicator={false}
-        backgroundImage="/images/gallery/benedicte-gisle-haaland-01.jpg"
+        backgroundImage="/images/gallery/benedicte-gisle-haaland-01.webp"
+        imageAlt="Benedicte Adrian"
         backgroundObjectPosition="center 15%"
       />
 

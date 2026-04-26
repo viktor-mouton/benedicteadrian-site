@@ -19,6 +19,7 @@ export default function HeroSection({
   title,
   subtitle,
   backgroundImage,
+  imageAlt = "",
   backgroundObjectPosition = "center 25%",
   showScrollIndicator = true,
   height = "min-h-screen",
@@ -43,7 +44,7 @@ export default function HeroSection({
         {backgroundImage ? (
           <img
             src={backgroundImage}
-            alt=""
+            alt={imageAlt}
             className="h-full w-full object-cover"
             style={{ objectPosition: backgroundObjectPosition }}
             fetchpriority="high"

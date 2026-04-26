@@ -62,6 +62,9 @@ export default function App() {
         <meta name="description" content={pageSeo.description} />
         <link rel="canonical" href={pageSeo.canonical} key="canonical" />
         {pageSeo.noindex && <meta name="robots" content="noindex" />}
+        {pageSeo.heroImage && (
+          <link rel="preload" as="image" href={pageSeo.heroImage} fetchPriority="high" />
+        )}
         <meta property="og:title" content={pageSeo.title} />
         <meta property="og:description" content={pageSeo.description} />
         <meta property="og:image" content={ogImage} />

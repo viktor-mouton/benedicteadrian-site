@@ -14,6 +14,7 @@ export default function TV() {
         height="min-h-[60vh]"
         showScrollIndicator={false}
         backgroundImage="/images/tv/deltager-bilde-boksen.avif"
+        imageAlt="Benedicte Adrian i Boksen på TV2"
       />
 
       {/* Introduction */}
