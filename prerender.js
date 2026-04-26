@@ -30,6 +30,8 @@ const browser = await puppeteer.launch({
 for (const route of ROUTES) {
   const page = await browser.newPage();
   await page.goto(`http://localhost:${PORT}${route}`, { waitUntil: 'networkidle0' });
+  // Wait for the LoadingScreen animation to complete and main content to be visible
+  await page.waitForSelector('h1', { visible: true, timeout: 15000 });
   const html = await page.content();
 
   const dir = join(DIST, route === '/' ? '' : route);

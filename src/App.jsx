@@ -60,7 +60,7 @@ export default function App() {
       <Helmet>
         <title>{pageSeo.title}</title>
         <meta name="description" content={pageSeo.description} />
-        <link rel="canonical" href={pageSeo.canonical} />
+        <link rel="canonical" href={pageSeo.canonical} key="canonical" />
         {pageSeo.noindex && <meta name="robots" content="noindex" />}
         <meta property="og:title" content={pageSeo.title} />
         <meta property="og:description" content={pageSeo.description} />

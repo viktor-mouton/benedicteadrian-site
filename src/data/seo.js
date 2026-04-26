@@ -21,6 +21,7 @@ export const seoData = {
     description:
       "Benedicte Adrian — norsk sanger og artist. Kjent fra Dollie de Luxe, Which Witch, MISTRA og som vokalpedagog. Booking og sangtimer.",
     canonical: `${BASE_URL}/`,
+    ogImage: `${BASE_URL}/images/gallery/benedicte-esten-borgos-01.webp`,
     structuredData: personSchema,
   },
   about: {
@@ -28,12 +29,20 @@ export const seoData = {
     description:
       "Biografi og karriere for Benedicte Adrian. Fra Dollie de Luxe og MGP-seier til Den Norske Opera, soloalbumet Desember og MISTRA med Anders Odden.",
     canonical: `${BASE_URL}/om`,
+    ogImage: `${BASE_URL}/images/gallery/benedicte-gisle-haaland-01.webp`,
+    structuredData: {
+      "@context": "https://schema.org",
+      "@type": "ProfilePage",
+      url: `${BASE_URL}/om`,
+      mainEntity: personSchema,
+    },
   },
   music: {
     title: "Musikk & Diskografi | Benedicte Adrian",
     description:
       "Utforsk musikken til Benedicte Adrian. Diskografi, MISTRA-samarbeidet med Anders Odden, soloalbumet Desember og Dollie de Luxe.",
     canonical: `${BASE_URL}/musikk`,
+    ogImage: `${BASE_URL}/images/hero/mistra-konsert.webp`,
     structuredData: {
       "@context": "https://schema.org",
       "@type": "MusicGroup",
@@ -51,6 +60,7 @@ export const seoData = {
     description:
       "Sangtimer og vokalundervisning med Benedicte Adrian. Forfatter av «Lær å synge på 21 dager». Privatundervisning, workshops og kurs.",
     canonical: `${BASE_URL}/sangtimer`,
+    ogImage: `${BASE_URL}/images/hero/bok-laer-a-synge.webp`,
     structuredData: {
       "@context": "https://schema.org",
       "@type": "EducationalOrganization",
@@ -102,18 +112,80 @@ export const seoData = {
     description:
       "Bilder fra konserter, forestillinger og prosjekter med Benedicte Adrian. Pressebilder og portretter.",
     canonical: `${BASE_URL}/galleri`,
+    ogImage: `${BASE_URL}/images/gallery/benedicte-gisle-haaland-02.webp`,
+    structuredData: {
+      "@context": "https://schema.org",
+      "@type": "ImageGallery",
+      name: "Galleri — Benedicte Adrian",
+      url: `${BASE_URL}/galleri`,
+      description:
+        "Bilder fra konserter, forestillinger og prosjekter med Benedicte Adrian. Pressebilder og portretter.",
+      author: personSchema,
+    },
   },
   tv: {
     title: "TV & Media | Benedicte Adrian",
     description:
       "Benedicte Adrians TV-opptredener. Fra Boksen på TV2 til Kokkeskolen og 24 stjerners julekalender. Bilder og oversikt.",
     canonical: `${BASE_URL}/tv`,
+    ogImage: `${BASE_URL}/images/tv/boksen-benedicte-keyart-45.webp`,
+    structuredData: {
+      "@context": "https://schema.org",
+      "@type": "ItemList",
+      name: "TV & Media — Benedicte Adrian",
+      url: `${BASE_URL}/tv`,
+      itemListElement: [
+        {
+          "@type": "ListItem",
+          position: 1,
+          item: {
+            "@type": "TVSeries",
+            name: "Boksen",
+            description: "Deltaker i TV2s populære underholdningsprogram Boksen, sesong 2.",
+            datePublished: "2026",
+            productionCompany: { "@type": "Organization", name: "TV2" },
+          },
+        },
+        {
+          "@type": "ListItem",
+          position: 2,
+          item: {
+            "@type": "TVSeries",
+            name: "Kokkeskolen",
+            description: "Benedicte var med i det populære matlagingsprogrammet Kokkeskolen på TV2.",
+            datePublished: "2025",
+            productionCompany: { "@type": "Organization", name: "TV2" },
+          },
+        },
+        {
+          "@type": "ListItem",
+          position: 3,
+          item: {
+            "@type": "TVSeries",
+            name: "24 stjerners julekalender",
+            description: "Benedicte deltok i NRKs festlige julekalender-konsept med kjente norske artister.",
+            datePublished: "2024",
+            productionCompany: { "@type": "Organization", name: "NRK" },
+          },
+        },
+      ],
+    },
   },
   contact: {
     title: "Kontakt & Booking | Benedicte Adrian",
     description:
       "Ta kontakt med Benedicte Adrian for booking, sangtimer eller andre henvendelser. Booking av konserter og arrangementer.",
     canonical: `${BASE_URL}/kontakt`,
+    ogImage: `${BASE_URL}/images/gallery/benedicte-esten-borgos-01.webp`,
+    structuredData: {
+      "@context": "https://schema.org",
+      "@type": "ContactPage",
+      name: "Kontakt & Booking — Benedicte Adrian",
+      url: `${BASE_URL}/kontakt`,
+      description:
+        "Ta kontakt med Benedicte Adrian for booking, sangtimer eller andre henvendelser.",
+      mainEntity: personSchema,
+    },
   },
   notFound: {
     title: "404 — Siden finnes ikke | Benedicte Adrian",
