@@ -20,7 +20,7 @@ const PATH_SEO_MAP = {
   "/kontakt": "contact",
 };
 const DEFAULT_OG_IMAGE =
-  "https://benedicteadrian.no/images/hero/mistra-konsert.webp";
+  "https://www.benedicteadrian.no/images/hero/mistra-konsert.webp";
 
 const Home = lazy(() => import("./pages/Home.jsx"));
 const About = lazy(() => import("./pages/About.jsx"));

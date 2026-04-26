@@ -5,12 +5,14 @@ const personSchema = {
   "@type": "Person",
   name: "Benedicte Adrian",
   url: BASE_URL,
+  image: `${BASE_URL}/images/gallery/benedicte-esten-borgos-01.webp`,
   jobTitle: "Sanger, Artist & Vokalpedagog",
   description:
     "Norsk sanger og artist kjent fra Dollie de Luxe, Which Witch, MISTRA og som vokalpedagog og forfatter.",
   sameAs: [
     "https://www.facebook.com/benedicteadrian",
     "https://www.instagram.com/benedicteadrian",
+    "https://open.spotify.com/artist/0XwVL3o8eZT2dNMC7iibwo",
   ],
   knowsAbout: ["Sang", "Opera", "Pop", "Metal", "Vokalundervisning"],
 };
@@ -72,6 +74,12 @@ export const seoData = {
       url: `${BASE_URL}/sangtimer`,
       description:
         "Sangtimer og vokalundervisning med Benedicte Adrian. Privatundervisning, workshops og masterclass.",
+      aggregateRating: {
+        "@type": "AggregateRating",
+        ratingValue: "5",
+        bestRating: "5",
+        reviewCount: "6",
+      },
       review: [
         {
           "@type": "Review",
