@@ -153,7 +153,7 @@ export default function Music() {
         </div>
       </section>
 
-      {/* Spotify embed placeholder */}
+      {/* Spotify */}
       <section className="py-24 md:py-32">
         <div className="mx-auto max-w-3xl px-6">
           <SectionHeading
@@ -161,15 +161,59 @@ export default function Music() {
             subtitle="Hør Benedictes musikk på Spotify"
           />
           <AnimatedSection>
-            <div className="overflow-hidden rounded-xl border border-border">
-              <iframe
-                src="https://open.spotify.com/embed/artist/3eRN1bky9c7y2WT3PShu6c"
-                width="100%"
-                height="352"
-                allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
-                loading="lazy"
-                className="block"
-              />
+            <div className="space-y-4">
+              <div className="overflow-hidden rounded-xl border border-border">
+                <iframe
+                  src="https://open.spotify.com/embed/artist/3eRN1bky9c7y2WT3PShu6c"
+                  width="100%"
+                  height="352"
+                  allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+                  loading="lazy"
+                  className="block"
+                />
+              </div>
+              <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
+                <div className="overflow-hidden rounded-xl border border-border">
+                  <iframe
+                    src="https://open.spotify.com/embed/album/4aMMepPhOoMBSBJBnk0U9l"
+                    width="100%"
+                    height="152"
+                    allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+                    loading="lazy"
+                    className="block"
+                  />
+                </div>
+                <div className="overflow-hidden rounded-xl border border-border">
+                  <iframe
+                    src="https://open.spotify.com/embed/track/2EjrsCcrkpkVwLcRa5gcU7"
+                    width="100%"
+                    height="152"
+                    allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+                    loading="lazy"
+                    className="block"
+                  />
+                </div>
+                <div className="overflow-hidden rounded-xl border border-border">
+                  <iframe
+                    src="https://open.spotify.com/embed/artist/4TibxG9eRiFzXSyaKdWDMk"
+                    width="100%"
+                    height="152"
+                    allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+                    loading="lazy"
+                    className="block"
+                  />
+                </div>
+                <div className="overflow-hidden rounded-xl border border-border">
+                  <iframe
+                    src="https://open.spotify.com/embed/artist/652wAdrAPRJj9bbFaG2SLo"
+                    width="100%"
+                    height="152"
+                    allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+                    loading="lazy"
+                    className="block"
+                  />
+                </div>
+              </div>
             </div>
           </AnimatedSection>
         </div>

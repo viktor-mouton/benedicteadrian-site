@@ -160,7 +160,7 @@ export const galleryImages = [
     src: "/images/gallery/pressefoto-benedicte-adrian.webp",
     alt: "Pressefoto Benedicte Adrian",
     category: "Presse",
-    caption: "Pressefoto Benedicte Adrian",
+    caption: "Foto: Jon Rune Trengereid",
   },
   {
     id: "idol-2007",
@@ -175,13 +175,6 @@ export const galleryImages = [
     alt: "Benedicte Adrian — iCare-kampanjen 2013",
     category: "Portrett",
     caption: "iCare-kampanjen 2013",
-  },
-  {
-    id: "sosiale-medier-portrett",
-    src: "/images/gallery/sosiale-medier-bilder.webp",
-    alt: "Benedicte Adrian portrett",
-    category: "Portrett",
-    caption: "Benedicte Adrian",
   },
   {
     id: "mistra-051A1399",
@@ -228,13 +221,6 @@ export const galleryImages = [
   {
     id: "mistra-L1020028",
     src: "/images/gallery/L1020028.webp",
-    alt: "MISTRA",
-    category: "MISTRA",
-    caption: "MISTRA",
-  },
-  {
-    id: "mistra-L1020314-2",
-    src: "/images/gallery/L1020314-2.webp",
     alt: "MISTRA",
     category: "MISTRA",
     caption: "MISTRA",

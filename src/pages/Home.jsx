@@ -24,7 +24,7 @@ const featuredProjects = [
     title: "Desember",
     subtitle: "Soloalbum",
     description:
-      "Benedictes personlige soloalbum med stemningsfulle sanger som viser hele bredden av hennes unike stemme.",
+      "Nye og tradisjonelle sanger om julen i originale arrangementer.",
     image: "/images/discography/album-desember.jpg",
     href: "/musikk",
     mobileOrder: "order-3 md:order-2",

@@ -45,18 +45,38 @@ const lessonTypes = [
 const testimonials = [
   {
     quote:
-      "Benedicte har en helt spesiell evne til å finne det beste i stemmen din. Etter bare noen timer følte jeg en enorm forskjell.",
-    author: "Sangelev",
+      "Sangtimene med Benedicte er så mye mer enn å synge — det er ren terapi. Hun har lært meg at fysisk og mentalt velvære er en forutsetning for å kunne synge. Kroppen må fungere og hodet må være til stede. Benedicte får holdning og pust på plass og jeg føler meg rett og slett bedre etterpå.",
+    author: "Runar Kvamme",
+    role: "Hobbysanger og bedriftsleder",
   },
   {
     quote:
-      "Workshopen med Benedicte var det beste vi har gjort som kor. Inspirerende, morsom og utrolig lærerik.",
-    author: "Korleder",
+      "Benedicte er kunnskapsrik, trygg og legger til rette for kreativitet kombinert med gode evner til å lære bort.",
+    author: "Adrian",
+    role: "Psykolog og hobbysanger",
   },
   {
     quote:
-      "Boken «Lær å synge på 21 dager» ga meg motet til å begynne. Nå tar jeg privatundervisning og elsker det!",
-    author: "Leser & elev",
+      "Undervisningen med Benedicte er så koselig at jeg glemte helt å være nervøs. Benedicte er svært dyktig og har fokus på de viktige tingene, ho forstår på en god måte hva jeg må jobbe med. Benedicte gjør undervisningen gøy og motiverende.",
+    author: "Berntine",
+    role: "Sangelev",
+  },
+  {
+    quote: "Inspirerende og motiverende sanglærer, anbefales!",
+    author: "Mathias",
+    role: "Sangelev",
+  },
+  {
+    quote:
+      "Benedicte er virkelig en god sanglærer. Hun har gjennom flere år hjulpet Lily med å utvikle sitt musikk potensiale. Måten Benedicte veileder og underviser Lily på, gjør at det de sammen utøver = magi. Det er alltid mye latter og god stemning når Benedicte tar Lily med inn i musikkens verden. Tusen takk Benedicte — du er virkelig en sjelden vare som vi setter umåtelig stor pris på.",
+    author: "Janne",
+    role: "Mor til Lily",
+  },
+  {
+    quote:
+      "Jeg har tatt sangtimer hos Benedicte siden 2018 og for meg var det udiskutabelt førstevalget! En av Norges vakreste stemmer!",
+    author: "Terje Grødem",
+    role: "Sangelev siden 2018",
   },
 ];
 
@@ -183,29 +203,54 @@ export default function Lessons() {
         </div>
       </section>
 
-      {/* Testimonials */}
+      {/* Testimonials — infinite scroll carousel */}
       <section className="border-y border-border bg-bg-elevated py-24 md:py-32">
+        <style>{`
+          @keyframes testimonial-scroll {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-50%); }
+          }
+          .testimonial-track {
+            animation: testimonial-scroll 40s linear infinite;
+          }
+          .testimonial-track:hover {
+            animation-play-state: paused;
+          }
+        `}</style>
         <div className="mx-auto max-w-7xl px-6">
           <SectionHeading title="Tilbakemeldinger" />
-          <div className="grid gap-8 md:grid-cols-3">
-            {testimonials.map((t, i) => (
-              <AnimatedSection key={i} delay={i * 0.15}>
-                <blockquote className="rounded-xl border border-border bg-bg-card p-8">
-                  <svg
-                    className="mb-4 h-8 w-8 text-accent-gold/30"
-                    fill="currentColor"
-                    viewBox="0 0 24 24"
-                  >
-                    <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10H14.017zM0 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10H0z" />
-                  </svg>
-                  <p className="text-sm italic leading-relaxed text-text-secondary">
-                    &laquo;{t.quote}&raquo;
-                  </p>
-                  <p className="mt-4 text-xs font-medium uppercase tracking-wider text-text-muted">
+        </div>
+        <div className="relative mt-12 overflow-hidden">
+          {/* fade edges */}
+          <div className="pointer-events-none absolute inset-y-0 left-0 z-10 w-24 bg-gradient-to-r from-bg-elevated to-transparent" />
+          <div className="pointer-events-none absolute inset-y-0 right-0 z-10 w-24 bg-gradient-to-l from-bg-elevated to-transparent" />
+          <div className="testimonial-track flex w-max gap-6 px-6">
+            {[...testimonials, ...testimonials].map((t, i) => (
+              <blockquote
+                key={i}
+                className="w-80 flex-none rounded-xl border border-border bg-bg-card p-8"
+              >
+                <svg
+                  className="mb-4 h-8 w-8 text-accent-gold/30"
+                  fill="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10H14.017zM0 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10H0z" />
+                </svg>
+                <p className="text-sm italic leading-relaxed text-text-secondary">
+                  &laquo;{t.quote}&raquo;
+                </p>
+                <footer className="mt-4">
+                  <p className="text-xs font-medium uppercase tracking-wider text-text-muted">
                     — {t.author}
                   </p>
-                </blockquote>
-              </AnimatedSection>
+                  {t.role && (
+                    <p className="mt-0.5 text-xs text-text-muted/60">
+                      {t.role}
+                    </p>
+                  )}
+                </footer>
+              </blockquote>
             ))}
           </div>
         </div>
