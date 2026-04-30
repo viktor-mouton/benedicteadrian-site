@@ -252,6 +252,44 @@ export default function Lessons() {
         </div>
       </section>
 
+      {/* FAQ */}
+      <section className="py-24 md:py-32">
+        <div className="mx-auto max-w-3xl px-6">
+          <SectionHeading title="Spørsmål og svar" />
+          <dl className="mt-12 space-y-6">
+            {[
+              {
+                q: "Hvem kan ta sangtimer hos Benedicte Adrian?",
+                a: "Sangtimer er tilgjengelig for alle nivåer — fra nybegynnere til profesjonelle sangere. Benedicte tilbyr privatundervisning, workshops og masterclass tilpasset individuelle behov.",
+              },
+              {
+                q: "Hva tilbyr Benedicte Adrian av vokalundervisning?",
+                a: "Benedicte tilbyr privatundervisning en-til-en, workshops og gruppeundervisning for kor og musikklinjer, samt masterclass for sangstudenter og profesjonelle.",
+              },
+              {
+                q: "Hva er boken «Lær å synge på 21 dager»?",
+                a: "«Lær å synge på 21 dager» er en sangbok skrevet av Benedicte Adrian og utgitt av Cappelen Damm. Boken gir strukturerte daglige øvelser på 30 minutter og passer for alle nivåer.",
+              },
+              {
+                q: "Hvordan kontakter jeg Benedicte Adrian for å booke sangtimer?",
+                a: "Ta kontakt via skjemaet på kontaktsiden for å høre om pris, tilgjengelighet og bookingmuligheter.",
+              },
+            ].map((item, i) => (
+              <AnimatedSection key={item.q} delay={i * 0.1}>
+                <div className="rounded-xl border border-border bg-bg-card p-8">
+                  <dt className="font-serif text-lg font-bold text-text-primary">
+                    {item.q}
+                  </dt>
+                  <dd className="mt-3 text-sm leading-relaxed text-text-secondary">
+                    {item.a}
+                  </dd>
+                </div>
+              </AnimatedSection>
+            ))}
+          </dl>
+        </div>
+      </section>
+
       {/* CTA */}
       <section className="py-24 md:py-32">
         <div className="mx-auto max-w-3xl px-6 text-center">

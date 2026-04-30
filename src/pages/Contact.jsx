@@ -1,5 +1,6 @@
 import PageTransition from "../components/layout/PageTransition.jsx";
 import HeroSection from "../components/ui/HeroSection.jsx";
+import SectionHeading from "../components/ui/SectionHeading.jsx";
 import ContactForm from "../components/ui/ContactForm.jsx";
 import AnimatedSection from "../components/ui/AnimatedSection.jsx";
 import SocialIcons from "../components/ui/SocialIcons.jsx";
@@ -78,6 +79,39 @@ export default function Contact() {
               </div>
             </AnimatedSection>
           </div>
+        </div>
+      </section>
+      {/* FAQ */}
+      <section className="bg-bg-elevated py-24 md:py-32">
+        <div className="mx-auto max-w-3xl px-6">
+          <SectionHeading title="Spørsmål og svar" />
+          <dl className="mt-12 space-y-6">
+            {[
+              {
+                q: "Hvem er Benedicte Adrian?",
+                a: "Benedicte Adrian er en norsk sanger og artist kjent fra Dollie de Luxe (MGP-vinner 1984 og Eurovision-representant), musikalen Which Witch og duoen MISTRA. Hun er også vokalpedagog og forfatter av «Lær å synge på 21 dager», utgitt av Cappelen Damm.",
+              },
+              {
+                q: "Hvordan kan jeg booke Benedicte Adrian til konsert eller arrangement?",
+                a: "Send en bookingforespørsel via kontaktskjemaet ovenfor. Benedicte er tilgjengelig for konserter, private arrangementer og bedriftseventer.",
+              },
+              {
+                q: "Hva tilbyr Benedicte Adrian?",
+                a: "Benedicte Adrian tilbyr konserter og opptredener, privatundervisning i sang og vokal, workshops og masterclass, og er tilgjengelig for mediesamarbeid og andre kulturprosjekter.",
+              },
+            ].map((item, i) => (
+              <AnimatedSection key={item.q} delay={i * 0.1}>
+                <div className="rounded-xl border border-border bg-bg-card p-8">
+                  <dt className="font-serif text-lg font-bold text-text-primary">
+                    {item.q}
+                  </dt>
+                  <dd className="mt-3 text-sm leading-relaxed text-text-secondary">
+                    {item.a}
+                  </dd>
+                </div>
+              </AnimatedSection>
+            ))}
+          </dl>
         </div>
       </section>
     </PageTransition>
